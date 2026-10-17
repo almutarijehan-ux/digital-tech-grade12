@@ -1,45 +1,113 @@
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>التقنية الرقمية – الصف الثالث الثانوي</title>
-  <style>
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Tahoma,Arial,sans-serif;background:#f4f7fb;color:#243047;line-height:1.8}
-    header{background:linear-gradient(135deg,#142d5c,#2878b8);color:#fff;text-align:center;padding:38px 18px}
-    header h1{margin:0 0 8px;font-size:clamp(1.5rem,4vw,2.2rem)}
-    header p{margin:0}
-    main{max-width:1000px;margin:26px auto;padding:0 16px}
-    .card{background:#fff;border-radius:18px;padding:24px;margin-bottom:20px;box-shadow:0 5px 22px #142d5c12}
-    h2{margin-top:0;color:#173e70}
-    .actions{display:flex;flex-wrap:wrap;gap:12px;margin:16px 0}
-    a.btn{display:inline-block;text-decoration:none;padding:11px 18px;border-radius:10px;background:#1769aa;color:#fff;font-weight:bold}
-    a.btn.secondary{background:#e8f1fb;color:#174b7c}
-    .viewer{width:100%;height:72vh;min-height:480px;border:1px solid #d7e1ef;border-radius:12px}
-    footer{text-align:center;padding:20px;color:#64748b;font-size:.9rem}
-  </style>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#142d5c">
+<title>تحدي التقنية الرقمية — المرحلة الثانوية</title>
+<style>
+:root{--navy:#142d5c;--blue:#2878b8;--cyan:#e8f5fb;--ink:#202c42;--muted:#65738a;--line:#e0e7f0;--paper:#f4f7fb;--white:#fff;--green:#147d57;--red:#b53b45;--gold:#d99724}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font-family:Tahoma,Arial,sans-serif;line-height:1.8}button,input,select{font:inherit}button{cursor:pointer;border:0}.top{background:linear-gradient(130deg,#10254e,#246ca7);color:white;padding:18px max(18px,calc((100vw - 1120px)/2));display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}.brand{font-weight:800;font-size:1.15rem}.top small{opacity:.8}.wrap{max-width:1120px;margin:28px auto;padding:0 16px}.hero{border-radius:24px;padding:clamp(24px,5vw,48px);background:linear-gradient(135deg,#fff,#eaf5fb);border:1px solid #d9e8f3;overflow:hidden}.eyebrow{color:var(--blue);font-weight:700;font-size:.9rem}.hero h1{font-size:clamp(2rem,5vw,3.2rem);line-height:1.3;margin:8px 0;color:var(--navy)}.hero p{max-width:720px;color:#51627b;margin:0 0 20px}.field{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.field input{padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:white;min-width:220px;flex:1;max-width:400px}.btn{padding:11px 16px;border-radius:12px;background:var(--navy);color:white;font-weight:700;transition:.15s}.btn:hover{filter:brightness(1.12);transform:translateY(-1px)}.btn.secondary{background:#eaf1f8;color:var(--navy)}.btn.outline{background:white;color:var(--navy);border:1px solid var(--line)}.btn:disabled{opacity:.4;cursor:not-allowed;transform:none}.section-head{display:flex;justify-content:space-between;align-items:end;gap:12px;flex-wrap:wrap;margin:28px 0 14px}.section-head h2{margin:0;color:var(--navy);font-size:1.35rem}.muted{color:var(--muted)}.grades{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.grade{background:white;border:1px solid var(--line);border-radius:20px;padding:22px;text-align:right;box-shadow:0 6px 22px #142d5c08;display:flex;flex-direction:column;min-height:190px}.grade .num{font-size:2rem;font-weight:900;color:var(--blue)}.grade h3{margin:0;color:var(--navy)}.grade p{color:var(--muted);font-size:.92rem;flex:1;margin:8px 0 15px}.grade button{width:100%}.notice{border:1px solid #f0dca9;background:#fff9e8;color:#77561b;border-radius:14px;padding:13px 16px;font-size:.92rem;margin-top:18px}.panel{background:white;border:1px solid var(--line);border-radius:20px;padding:22px;margin-top:18px;box-shadow:0 6px 22px #142d5c08}.hidden{display:none!important}.crumb{color:var(--muted);font-size:.9rem;margin-bottom:12px}.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 18px}.filters{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}.filters select{padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:white;min-width:180px}.units{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.unit{border:1px solid var(--line);border-radius:15px;padding:14px}.unit h3{margin:0 0 8px;color:var(--navy);font-size:1rem}.lesson{display:flex;gap:9px;align-items:flex-start;padding:7px 0;border-top:1px solid #f0f3f7}.lesson input{margin-top:7px;accent-color:var(--blue);width:17px;height:17px}.lesson label{flex:1;cursor:pointer}.tag{display:inline-block;font-size:.75rem;color:#7b5c1d;background:#fff5d8;border-radius:7px;padding:1px 7px}.stats{display:flex;gap:12px;flex-wrap:wrap}.stat{background:#f1f6fb;border-radius:12px;padding:10px 14px;min-width:120px}.stat b{display:block;font-size:1.25rem;color:var(--navy)}.quiz-head{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:center}.progress{height:9px;background:#e8edf4;border-radius:99px;overflow:hidden;margin:14px 0 22px}.progress span{display:block;height:100%;background:linear-gradient(90deg,#2878b8,#3aa8a0);width:0;transition:width .2s}.qmeta{color:var(--blue);font-weight:700;font-size:.9rem}.question{font-size:1.25rem;font-weight:800;line-height:1.7;margin:12px 0 18px}.answers{display:grid;gap:10px}.answer{padding:13px 15px;border:1px solid var(--line);border-radius:13px;background:#fff;text-align:right;display:flex;gap:10px;align-items:center}.answer .letter{display:grid;place-items:center;width:30px;height:30px;border-radius:9px;background:#edf3f9;color:var(--navy);font-weight:800;flex-shrink:0}.answer:hover{border-color:#7baed2}.answer.correct{border-color:#55ad8a;background:#edfaf4}.answer.wrong{border-color:#d98287;background:#fff1f1}.answer:disabled{cursor:default}.feedback{padding:14px 16px;border-radius:13px;margin-top:15px}.feedback.good{background:#edfaf4;border:1px solid #bce8d4;color:#176346}.feedback.bad{background:#fff1f1;border:1px solid #f1c5c8;color:#8f2932}.quiz-actions{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:20px}.result-score{font-size:3rem;font-weight:900;color:var(--navy);line-height:1.3}.barline{height:8px;background:#edf1f6;border-radius:99px;overflow:hidden}.barline span{display:block;height:100%;background:#2878b8}.result-row{padding:12px 0;border-bottom:1px solid var(--line)}.result-row:last-child{border-bottom:0}.foot{text-align:center;color:var(--muted);font-size:.85rem;padding:30px 12px}.small{font-size:.87rem}.inline-actions{display:flex;gap:8px;flex-wrap:wrap}.review-card{border:1px solid var(--line);border-radius:13px;padding:14px;margin:12px 0}.review-card h4{margin:0 0 8px}.status{font-size:.8rem;font-weight:700}.status.ok{color:var(--green)}.status.no{color:var(--red)}@media(max-width:700px){.grades{grid-template-columns:1fr}.units{grid-template-columns:1fr}.wrap{margin:18px auto}.panel{padding:16px}.hero{border-radius:18px}.grade{min-height:unset}.quiz-head{align-items:flex-start}}
+</style>
 </head>
 <body>
-  <header>
-    <h1>منصة التعلّم – التقنية الرقمية</h1>
-    <p>الصف الثالث الثانوي | الفصل الدراسي الأول</p>
-  </header>
-  <main>
-    <section class="card">
-      <h2>مرحبًا بطالباتنا 🌟</h2>
-      <p>من هنا يمكنكِ فتح مورد الكتاب، وقراءة المحتوى والتعلّم بالسرعة المناسبة لكِ.</p>
-      <div class="actions">
-        <a class="btn" href="https://iencontent.ien.edu.sa/books/1448-GE-CBM-GNRL-TRC3-SM1-mcomp3.pdf" target="_blank" rel="noopener">فتح الكتاب في نافذة جديدة</a>
-        <a class="btn secondary" href="https://iencontent.ien.edu.sa/books/1448-GE-CBM-GNRL-TRC3-SM1-mcomp3.pdf" download>تحميل الكتاب PDF</a>
-      </div>
-    </section>
-    <section class="card">
-      <h2>مورد التعلّم: الكتاب الإلكتروني</h2>
-      <p>يمكنكِ قراءة الكتاب أدناه. إذا لم يظهر داخل الصفحة، استخدمي زر «فتح الكتاب في نافذة جديدة» أعلاه.</p>
-      <iframe class="viewer" title="الكتاب الإلكتروني للتقنية الرقمية" src="https://iencontent.ien.edu.sa/books/1448-GE-CBM-GNRL-TRC3-SM1-mcomp3.pdf"></iframe>
-    </section>
-  </main>
-  <footer>مورد تعليمي للطالبات – التقنية الرقمية</footer>
-</body>
-</html>
+<header class="top"><div><div class="brand">◈ تحدي التقنية الرقمية</div><small>مراجعة تفاعلية للمرحلة الثانوية</small></div><div class="small">واجهة عربية • تعمل على الجوال والحاسب</div></header>
+<main class="wrap">
+<section id="home">
+<div class="hero"><div class="eyebrow">تعلّم • اختبر • راجع تقدّمك</div><h1>تحدي التقنية الرقمية</h1><p>اختاري صفك ودروسك، ثم ابدئي الاختبار مع تصحيح فوري وتفسير للإجابات ونتيجة قابلة للحفظ.</p><div class="field"><label for="studentName">اسم الطالب (اختياري)</label><input id="studentName" maxlength="60" placeholder="اكتبي اسمك هنا"><button class="btn secondary" id="resumeBtn">عرض آخر نتيجة محفوظة</button></div></div>
+<div class="section-head"><h2>اختاري الصف الدراسي</h2><span class="muted small">تُعرض المقررات بحسب الصف والفصل المتاح</span></div>
+<div class="grades">
+<article class="grade"><div class="num">01</div><h3>الأول الثانوي</h3><p>السنة الأولى المشتركة — مقررات التقنية الرقمية.</p><button class="btn" data-grade="1">اختيار الصف</button></article>
+<article class="grade"><div class="num">02</div><h3>الثاني الثانوي</h3><p>السنة الثانية — راجعي اسم المقرر والمسار والفصل قبل البدء.</p><button class="btn" data-grade="2">اختيار الصف</button></article>
+<article class="grade"><div class="num">03</div><h3>الثالث الثانوي</h3><p>السنة الثالثة — راجعي اسم المقرر والمسار والفصل قبل البدء.</p><button class="btn" data-grade="3">اختيار الصف</button></article>
+</div>
+<div class="notice"><b>تنبيه بشأن دقة المحتوى:</b> هذه النسخة تتضمن واجهة الاختبار ووظائفها، مع أسئلة تأسيسية محدودة للتجربة فقط. لا يُعد بنك الأسئلة مكتملًا أو معتمدًا حتى مطابقة كل درس وأهدافه وصفحاته مع ملفات الكتب الرسمية للعام 1448هـ.</div>
+</section>
+<section id="selectPage" class="panel hidden">
+<div class="crumb"><button class="btn outline" id="homeBtn">← الرئيسية</button> / اختيار الدروس</div>
+<div class="section-head"><h2 id="selectTitle">اختيار الدروس</h2><span id="curriculumStatus" class="tag">محتوى أولي</span></div>
+<div class="filters"><label>الفصل الدراسي <select id="termFilter"><option value="all">جميع الفصول المتاحة</option><option value="1">الفصل الأول</option><option value="2">الفصل الثاني</option><option value="3">الفصل الثالث</option></select></label><label>المسار/المقرر <select id="pathFilter"><option value="all">جميع المسارات/المقررات</option><option value="common">السنة الأولى المشتركة</option><option value="general">عام</option><option value="health">الصحة والحياة</option><option value="engineering">الهندسة وعلوم الحاسب</option><option value="business">إدارة الأعمال</option><option value="sharia">الشرعي</option></select></label></div>
+<div class="toolbar"><button class="btn secondary" id="selectAll">تحديد جميع الدروس الظاهرة</button><button class="btn outline" id="clearAll">إلغاء التحديد</button></div>
+<div id="units" class="units"></div>
+<div class="panel" style="margin-top:18px"><div class="stats"><div class="stat"><span class="muted small">الدروس المحددة</span><b id="selectedLessons">0</b></div><div class="stat"><span class="muted small">أسئلة البنك المتاحة</span><b id="selectedQuestions">0</b></div></div><div class="toolbar"><button class="btn" id="startQuiz" disabled>ابدئي الاختبار</button><span class="muted small" id="startHint">حددي درسًا واحدًا على الأقل.</span></div></div>
+</section>
+<section id="quizPage" class="panel hidden">
+<div class="crumb"><button class="btn outline" id="backToLessons">← اختيار الدروس</button></div>
+<div class="quiz-head"><div><div class="qmeta" id="quizLesson"></div><h2 style="margin:3px 0">سؤال التحدي</h2></div><div class="stat"><span class="muted small">السؤال</span><b id="qCount">1 / 1</b></div></div>
+<div class="progress"><span id="progressBar"></span></div>
+<div id="questionText" class="question"></div><div id="answers" class="answers"></div><div id="feedback" class="feedback hidden"></div>
+<div class="quiz-actions"><button class="btn outline" id="prevQ">السابق</button><div class="inline-actions"><button class="btn secondary" id="nextQ" disabled>التالي</button><button class="btn hidden" id="finishQuiz">عرض النتيجة</button></div></div>
+</section>
+<section id="resultPage" class="panel hidden">
+<div class="crumb">نتيجة الاختبار</div><div class="eyebrow">أحسنتِ على إكمال التحدي</div><h2 id="resultTitle">نتيجتك</h2><div class="result-score" id="scorePct">0%</div><p id="scoreText" class="muted"></p><div class="stats"><div class="stat"><span class="muted small">الإجابات الصحيحة</span><b id="correctNum">0</b></div><div class="stat"><span class="muted small">الإجابات الخاطئة</span><b id="wrongNum">0</b></div><div class="stat"><span class="muted small">عدد الأسئلة</span><b id="totalNum">0</b></div></div>
+<div class="section-head"><h2>النتيجة بحسب الدروس</h2></div><div id="lessonResults"></div><div class="toolbar"><button class="btn" id="reviewBtn">مراجعة الإجابات</button><button class="btn secondary" id="retryBtn">إعادة الاختبار</button><button class="btn outline" id="downloadBtn">تحميل النتيجة JSON</button><button class="btn outline" id="csvBtn">تحميل ملخص CSV</button><button class="btn outline" id="homeFromResult">الرئيسية</button></div>
+</section>
+<section id="reviewPage" class="panel hidden"><div class="crumb"><button class="btn outline" id="backResult">← النتيجة</button></div><h2>مراجعة الإجابات</h2><div id="reviewList"></div><div class="toolbar"><button class="btn" id="retryFromReview">إعادة الاختبار</button></div></section>
+</main>
+<footer class="foot">تحدي التقنية الرقمية — المرحلة الثانوية<br>يُحفظ التقدم والنتائج على هذا الجهاز فقط. لا تُرسل بيانات الطالب إلى خادم.</footer>
+<script>
+const curriculum = {
+"1":{grade:"الأول الثانوي",courses:[{term:1,path:"common",units:[
+{title:"الوحدة الأولى: أساسيات علم أجهزة الحاسب",lessons:["تمثيل البيانات","بنية جهاز الحاسب","أنظمة التشغيل","أساسيات الشبكات","تقنية المعلومات والاتصالات والمجتمع"]},
+{title:"الوحدة الثانية: العمل عبر الإنترنت",lessons:["العمل مع المستندات عبر الإنترنت","الاجتماعات عبر الإنترنت","بث العرض التقديمي","إدارة الملاحظات","الخرائط الذهنية"]},
+{title:"الوحدة الثالثة: التقنية والحياة",lessons:["المراقبة والتحكم","الذكاء الاصطناعي","التقنيات الناشئة","الصحة والبيئة"]},
+{title:"الوحدة الرابعة: البرمجة باستخدام HTML",lessons:["إنشاء موقع إلكتروني بلغة HTML","بنية المحتوى","إنشاء نموذج بلغة HTML"]}]},
+{term:2,path:"common",units:[
+{title:"الجزء الثاني من المقرر — يلزم التحقق من فهرس النسخة المعتمدة",lessons:["معالجة الصور المتقدمة","مستندات ونماذج وتقارير الأعمال","الشبكات","البرمجة بواسطة المايكروبت"]}]}]},
+"2":{grade:"الثاني الثانوي",courses:[{term:1,path:"general",units:[
+{title:"مقرر التقنية الرقمية 2 — فهرس أولي يحتاج مطابقة النسخة والمسار",lessons:["البيانات والمعلومات والمعرفة","علم البيانات","تحليل البيانات"]}]}]},
+"3":{grade:"الثالث الثانوي",courses:[{term:1,path:"general",units:[
+{title:"مقرر التقنية الرقمية 3 — فهرس أولي يحتاج مطابقة النسخة والمسار",lessons:["تخطيط المشروعات"]}]}]}
+};
+const bank = [
+{id:"q1",grade:"1",term:1,path:"common",unit:"الوحدة الأولى: أساسيات علم أجهزة الحاسب",lesson:"تمثيل البيانات",type:"mcq",q:"ما الوحدة الأساسية الشائعة لقياس سعة البيانات الرقمية؟",options:["البت","المتر","الثانية","الدرجة المئوية"],answer:0,why:"البت (bit) أصغر وحدة لتمثيل البيانات الرقمية، ويتخذ إحدى قيمتين: 0 أو 1.",objective:"التعرف على وحدة قياس البيانات",page:null,source:"يلزم تحديد رقم الصفحة من نسخة الكتاب الرسمية."},
+{id:"q2",grade:"1",term:1,path:"common",unit:"الوحدة الأولى: أساسيات علم أجهزة الحاسب",lesson:"بنية جهاز الحاسب",type:"mcq",q:"أي جزء ينفذ التعليمات ويعالج البيانات داخل الحاسب؟",options:["وحدة المعالجة المركزية","الشاشة","لوحة المفاتيح","مكبر الصوت"],answer:0,why:"وحدة المعالجة المركزية تنفذ التعليمات وتعالج البيانات، بينما الشاشة وأجهزة الإدخال والإخراج تؤدي وظائف أخرى.",objective:"تمييز وظيفة وحدة المعالجة المركزية",page:null,source:"يلزم تحديد رقم الصفحة من نسخة الكتاب الرسمية."},
+{id:"q3",grade:"1",term:1,path:"common",unit:"الوحدة الأولى: أساسيات علم أجهزة الحاسب",lesson:"أنظمة التشغيل",type:"tf",q:"نظام التشغيل يدير موارد الحاسب ويساعد على تشغيل التطبيقات.",options:["صح","خطأ"],answer:0,why:"صحيح؛ من وظائف نظام التشغيل إدارة موارد الجهاز وتوفير بيئة لتشغيل التطبيقات.",objective:"شرح وظيفة نظام التشغيل",page:null,source:"يلزم تحديد رقم الصفحة من نسخة الكتاب الرسمية."},
+{id:"q4",grade:"1",term:1,path:"common",unit:"الوحدة الثالثة: التقنية والحياة",lesson:"الذكاء الاصطناعي",type:"mcq",q:"أي موقف يمثل استخدامًا للذكاء الاصطناعي؟",options:["نظام يقترح محتوى بناءً على أنماط تفضيلات المستخدم","مصباح عادي يعمل بمفتاح فقط","ورقة مطبوعة لا تتغير","كابل كهربائي ينقل الطاقة فقط"],answer:0,why:"تستخدم أنظمة التوصية البيانات لاكتشاف الأنماط وتقديم اقتراحات مناسبة، وهو مثال على تطبيقات الذكاء الاصطناعي.",objective:"تمييز تطبيقات الذكاء الاصطناعي",page:null,source:"يلزم تحديد رقم الصفحة من نسخة الكتاب الرسمية."},
+{id:"q5",grade:"2",term:1,path:"general",unit:"مقرر التقنية الرقمية 2 — فهرس أولي يحتاج مطابقة النسخة والمسار",lesson:"البيانات والمعلومات والمعرفة",type:"mcq",q:"ما الوصف الأقرب للمعلومات؟",options:["بيانات تمت معالجتها فأصبحت ذات معنى","رموز عشوائية دون سياق دائمًا","جهاز لتخزين الملفات","تعليمات تشغيلية فقط"],answer:0,why:"المعلومات هي بيانات تمت معالجتها أو تنظيمها بحيث يصبح لها معنى ويمكن الاستفادة منها.",objective:"التمييز بين البيانات والمعلومات",page:null,source:"يلزم التحقق من مطابقة المقرر والصفحة في النسخة الرسمية."},
+{id:"q6",grade:"3",term:1,path:"general",unit:"مقرر التقنية الرقمية 3 — فهرس أولي يحتاج مطابقة النسخة والمسار",lesson:"تخطيط المشروعات",type:"tf",q:"يساعد تحديد نطاق المشروع وأهدافه على توضيح ما ينبغي إنجازه.",options:["صح","خطأ"],answer:0,why:"صحيح؛ يوضح نطاق المشروع وحدوده والأعمال المتوقعة، بينما تساعد الأهداف على تحديد النتائج المراد تحقيقها.",objective:"فهم دور النطاق والأهداف في التخطيط",page:null,source:"يلزم التحقق من مطابقة المقرر والصفحة في النسخة الرسمية."}
+];
+let grade="1", selected=new Set(), quiz=[], answers={}, idx=0, lastResult=null, quizGrade="1", quizLessons=[];
+const $=id=>document.getElementById(id);
+function show(id){["home","selectPage","quizPage","resultPage","reviewPage"].forEach(x=>$(x).classList.toggle("hidden",x!==id));window.scrollTo({top:0,behavior:"smooth"})}
+function allLessons(g){return curriculum[g].courses.flatMap(c=>c.units.flatMap(u=>u.lessons.map(l=>({lesson:l,unit:u.title,term:c.term,path:c.path}))));}
+function activeCourses(){let term=$("termFilter").value,path=$("pathFilter").value;return curriculum[grade].courses.filter(c=>(term==="all"||String(c.term)===term)&&(path==="all"||c.path===path));}
+function availableQuestions(){return bank.filter(q=>q.grade===grade&&selected.has(q.lesson)&&activeCourses().some(c=>c.term===q.term&&c.path===q.path));}
+function renderUnits(){
+const courses=activeCourses();let html="";
+courses.forEach(c=>c.units.forEach(u=>{html+='<article class="unit"><h3>'+u.title+'</h3>';u.lessons.forEach(l=>{const checked=selected.has(l)?"checked":"";const count=bank.filter(q=>q.grade===grade&&q.lesson===l&&q.term===c.term&&q.path===c.path).length;html+='<div class="lesson"><input type="checkbox" data-lesson="'+l.replace(/"/g,"&quot;")+'" '+checked+' id="lesson-'+grade+'-'+btoa(unescape(encodeURIComponent(l))).replace(/=/g,"")+'"><label for="lesson-'+grade+'-'+btoa(unescape(encodeURIComponent(l))).replace(/=/g,"")+'">'+l+' <span class="tag">'+count+' سؤال متاح</span></label></div>'});html+='</article>'}));
+$("units").innerHTML=html||'<p class="muted">لا توجد وحدات مطابقة للفلاتر الحالية.</p>';
+$("units").querySelectorAll('input[type=checkbox]').forEach(cb=>cb.addEventListener("change",()=>{cb.checked?selected.add(cb.dataset.lesson):selected.delete(cb.dataset.lesson);updateSelection()}));updateSelection();
+}
+function updateSelection(){const qs=availableQuestions();$("selectedLessons").textContent=selected.size;$("selectedQuestions").textContent=qs.length;$("startQuiz").disabled=qs.length===0;$("startHint").textContent=qs.length?"سيظهر الاختبار بجميع الأسئلة المتاحة للدروس المحددة.":"اختاري درسًا يحتوي على أسئلة متاحة للبدء."}
+function beginGrade(g){grade=g;selected.clear();$("selectTitle").textContent="اختيار دروس "+curriculum[g].grade;$("termFilter").value="all";$("pathFilter").value="all";renderUnits();show("selectPage")}
+document.querySelectorAll("[data-grade]").forEach(b=>b.addEventListener("click",()=>beginGrade(b.dataset.grade)));
+$("homeBtn").onclick=()=>show("home");$("termFilter").onchange=renderUnits;$("pathFilter").onchange=renderUnits;
+$("selectAll").onclick=()=>{activeCourses().forEach(c=>c.units.forEach(u=>u.lessons.forEach(l=>selected.add(l))));renderUnits()};
+$("clearAll").onclick=()=>{selected.clear();renderUnits()};
+$("startQuiz").onclick=()=>{quizGrade=grade;quizLessons=[...selected];quiz=availableQuestions();answers={};idx=0;show("quizPage");renderQuestion()};
+$("backToLessons").onclick=()=>show("selectPage");
+function renderQuestion(){
+const q=quiz[idx];if(!q)return;const answered=answers[q.id]!==undefined;
+$("quizLesson").textContent=curriculum[quizGrade].grade+" • "+q.lesson;$("qCount").textContent=(idx+1)+" / "+quiz.length;$("progressBar").style.width=((idx+1)/quiz.length*100)+"%";$("questionText").textContent=q.q;
+$("answers").innerHTML=q.options.map((op,i)=>'<button class="answer" data-answer="'+i+'" '+(answered?"disabled":"")+'><span class="letter">'+String.fromCharCode(65+i)+'</span><span>'+op+'</span></button>').join("");
+$("answers").querySelectorAll("button").forEach(b=>b.onclick=()=>chooseAnswer(Number(b.dataset.answer)));
+$("feedback").className="feedback hidden";if(answered){showFeedback(q,answers[q.id]);}
+$("prevQ").disabled=idx===0;$("nextQ").classList.toggle("hidden",idx===quiz.length-1);$("nextQ").disabled=!answered;$("finishQuiz").classList.toggle("hidden",idx!==quiz.length-1);$("finishQuiz").disabled=!answered;
+}
+function chooseAnswer(n){const q=quiz[idx];if(answers[q.id]!==undefined)return;answers[q.id]=n;renderQuestion()}
+function showFeedback(q,n){$("answers").querySelectorAll("button").forEach((b,i)=>{if(i===q.answer)b.classList.add("correct");if(i===n&&n!==q.answer)b.classList.add("wrong")});const f=$("feedback");f.className="feedback "+(n===q.answer?"good":"bad");f.innerHTML="<b>"+(n===q.answer?"إجابة صحيحة!":"ليست الإجابة الصحيحة.")+"</b><div>"+q.why+"</div><div class='small' style='margin-top:7px'><b>الهدف:</b> "+q.objective+"</div><div class='small'><b>المصدر:</b> "+(q.page?"صفحة "+q.page:q.source)+"</div>";}
+$("nextQ").onclick=()=>{if(idx<quiz.length-1){idx++;renderQuestion()}};$("prevQ").onclick=()=>{if(idx>0){idx--;renderQuestion()}};$("finishQuiz").onclick=finishQuiz;
+function finishQuiz(){const rows=quiz.map(q=>({...q,chosen:answers[q.id],correct:answers[q.id]===q.answer}));const correct=rows.filter(q=>q.correct).length;lastResult={student:$("studentName").value.trim(),grade:quizGrade,gradeName:curriculum[quizGrade].grade,date:new Date().toISOString(),total:rows.length,correct,wrong:rows.length-correct,percent:Math.round(correct/rows.length*100),rows};try{localStorage.setItem("digitalTechLastResult",JSON.stringify(lastResult));localStorage.setItem("digitalTechName",lastResult.student)}catch(e){}renderResult();show("resultPage")}
+function renderResult(){if(!lastResult)return;$("resultTitle").textContent=(lastResult.student?lastResult.student+"، ":"")+"هذه نتيجتك في "+lastResult.gradeName;$("scorePct").textContent=lastResult.percent+"%";$("scoreText").textContent=lastResult.percent>=85?"ممتاز! واصلي المراجعة للمحافظة على مستواك.":lastResult.percent>=60?"عمل جيد، راجعي الأسئلة الخاطئة لتثبيت المفاهيم.":"لا بأس، راجعي التفسيرات ثم أعيدي الاختبار."; $("correctNum").textContent=lastResult.correct;$("wrongNum").textContent=lastResult.wrong;$("totalNum").textContent=lastResult.total;
+const groups={};lastResult.rows.forEach(q=>{const k=q.lesson;(groups[k]??={total:0,correct:0}).total++;if(q.correct)groups[k].correct++});
+$("lessonResults").innerHTML=Object.entries(groups).map(([l,v])=>'<div class="result-row"><div style="display:flex;justify-content:space-between;gap:10px"><b>'+l+'</b><span class="muted">'+v.correct+' / '+v.total+'</span></div><div class="barline"><span style="width:'+(v.correct/v.total*100)+'%"></span></div></div>').join("");}
+$("reviewBtn").onclick=()=>{renderReview();show("reviewPage")};$("backResult").onclick=()=>show("resultPage");$("retryBtn").onclick=retry;$("retryFromReview").onclick=retry;$("homeFromResult").onclick=()=>show("home");
+function retry(){if(!lastResult)return;grade=lastResult.grade;quizGrade=lastResult.grade;quiz=lastResult.rows.map(({chosen,correct,...q})=>q);answers={};idx=0;show("quizPage");renderQuestion()}
+function renderReview(){$("reviewList").innerHTML=lastResult.rows.map((q,i)=>'<article class="review-card"><div class="status '+(q.correct?"ok":"no")+'">'+(q.correct?"✓ صحيحة":"✕ غير صحيحة")+'</div><h4>'+(i+1)+'. '+q.q+'</h4><div class="small">الدرس: '+q.lesson+'</div><p class="small">إجابتك: <b>'+(q.options[q.chosen]??"لم تتم الإجابة")+'</b></p><p class="small">الإجابة الصحيحة: <b>'+q.options[q.answer]+'</b></p><p>'+q.why+'</p><div class="small muted">الهدف: '+q.objective+'<br>المصدر: '+(q.page?"صفحة "+q.page:q.source)+'</div></article>').join("")}
+function download(name,content,type){const blob=new Blob([content],{type}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000)}
+$("downloadBtn").onclick=()=>{if(lastResult)download("نتيجة-تحدي-التقنية-الرقمية.json",JSON.stringify(lastResult,null,2),"application/json;charset=utf-8")};
+$("csvBtn").onclick=()=>{if(!lastResult)return;const rows=[["الصف","الدرس","السؤال","إجابة الطالب","الإجابة الصحيحة","النتيجة","الهدف","صفحة المصدر"],...lastResult.rows.map(q=>[lastResult.gradeName,q.lesson,q.q,q.options[q.chosen]??"لم تتم الإجابة",q.options[q.answer],q.correct?"صحيح":"خطأ",q.objective,q.page??"غير موثق بعد"])];const csv="\ufeff"+rows.map(r=>r.map(v=>'"'+String(v).replace(/"/g,'""')+'"').join(",")).join("\r\n");download("ملخص-النتيجة.csv",csv,"text/csv;charset=utf-8")};
+$("resumeBtn").onclick=()=>{try{const data=localStorage.getItem("digitalTechLastResult");if(!data){alert("لا توجد نتيجة محفوظة على هذا الجهاز حتى الآن.");return}lastResult=JSON.parse(data);$("studentName").value=lastResult.student||"";renderResult();show("resultPage")}catch(e){alert("تعذر فتح النتيجة المحفوظة.")}};
+try{$("studentName").value=localStorage.getItem("digitalTechName")||""}catch(e){}
+</script>
+</body></html>
